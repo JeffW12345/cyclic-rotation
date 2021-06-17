@@ -26,9 +26,9 @@ namespace CodilityChallenges
         public static void Main(string[] args)
         {
             int[] A = { 1, 1, 2, 3, 5};
-            int [] C = solution(A, 42);
+            int [] testArray = solution(A, 42);
             // Expected: 35112
-            foreach (var item in C)
+            foreach (var item in testArray)
             {
                 Console.Write(item);
             }
