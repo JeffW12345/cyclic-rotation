@@ -8,11 +8,11 @@ namespace CodilityChallenges
     {
         public static int[] solution(int[] A, int K)
         {
-            int arrayLen = A.Length;
             if (A.Length == 0)
             {
                 return A;
             }
+            int arrayLen = A.Length;
             int[] newArray = new int[arrayLen];
             int placesToMove = K > arrayLen ? K % arrayLen : K;
             for (int index = 0; index < arrayLen; index++)
