@@ -17,16 +17,24 @@ namespace CodilityChallenges
             int placesToMove = K > arrayLen ? K % arrayLen : K;
             for (int index = 0; index < arrayLen; index++)
             {
-                int newPosition = (index + placesToMove) > arrayLen - 1 ? placesToMove - ((arrayLen - 1) - index) - 1 : index + placesToMove;
-                newArray[newPosition] = A[index];
+                int numIndexesAfterThis = arrayLen - index - 1;
+                if (placesToMove > numIndexesAfterThis)
+                {
+                    int indentation = placesToMove - numIndexesAfterThis - 1;
+                    newArray[indentation] = A[index];
+                }
+                else
+                {
+                    newArray[index + placesToMove] = A[index];
+                }
             }
             return newArray;
         }
 
         public static void Main(string[] args)
         {
-            int[] A = { 1, 1, 2, 3, 5};
-            int [] testArray = solution(A, 42);
+            int[] A = { 1, 1, 2, 3, 5 };
+            int[] testArray = solution(A, 42);
             // Expected: 35112
             foreach (var item in testArray)
             {
