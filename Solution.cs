@@ -12,12 +12,11 @@ namespace CodilityChallenges
             {
                 return A;
             }
-            int arrayLen = A.Length;
             int[] newArray = new int[arrayLen];
-            int placesToMove = K > arrayLen ? K % arrayLen : K;
-            for (int index = 0; index < arrayLen; index++)
+            int placesToMove = K % arrayLen;
+            for (int index = 0; index < A.Length; index++)
             {
-                int numIndexesAfterThis = arrayLen - index - 1;
+                int numIndexesAfterThis = A.Length - index - 1;
                 if (placesToMove > numIndexesAfterThis)
                 {
                     int indentation = placesToMove - numIndexesAfterThis - 1;
@@ -34,8 +33,7 @@ namespace CodilityChallenges
         public static void Main(string[] args)
         {
             int[] A = { 1, 1, 2, 3, 5 };
-            int[] testArray = solution(A, 42);
-            // Expected: 35112
+            int[] testArray = solution(A, 42); // Expected: 35112
             foreach (var item in testArray)
             {
                 Console.Write(item);
