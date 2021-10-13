@@ -1,4 +1,4 @@
-// Solution to the challenge at https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/
+// C# solution to the challenge at https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/
 
 namespace CodilityChallenges
 {
